@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel = "stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div class="main-content">
+    {{>header}}
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>User Name</th>
+        <th>Location</th>
+        <th>Start Date Time</th>
+        <th>End Date Time</th>
+      </tr>
+      {{#each reservations}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{location.seat}}</td>
+            <td>{{startDateTime}}</td>
+            <td>{{endDateTime}}</td>
+        </tr>
+      {{/each}}
+    </table>
+
+    <!-- {{reservations}} -->
+  </div>
+
+    <script src ="/js/app.js"></script>
+</body>
+
+</html>
